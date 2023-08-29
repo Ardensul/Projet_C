@@ -1,19 +1,18 @@
 #include "main.h"
 
-
-void ouverture (struct Option_gene option)
+void decodage (struct Option_gene option)
 {
     FILE *source;
     FILE *dest;
 
-    source = fopen(option.source,"r");
-    dest = fopen(option.dest, "w+t");
+    source = fopen(option.dest,"r");
+    dest = fopen(option.source, "w+t");
 
     int longeur_perroquet = strlen(option.passfrase);
     int avancement = 0;
     int pas_perroquet = 0;
     char clef;
-    
+
     char lecture;
 
     if ( source == NULL || dest == NULL )
@@ -38,18 +37,14 @@ void ouverture (struct Option_gene option)
     {
         pas_perroquet = avancement % longeur_perroquet;
         clef = option.passfrase[pas_perroquet];
-        char sortie = chifrement(lecture, clef,true);
+        char sortie = chifrement(lecture, clef, false);
         fwrite(&sortie, sizeof(sortie), sizeof(char), dest);
         avancement ++;
 
         fread(&lecture, sizeof(lecture), sizeof(char), source);
     }
 
-
     fclose(source);
-    fclose(dest);  
+    fclose(dest);
 
-    source = fopen(option.source,"w");
-    fclose(source);
-    
 }

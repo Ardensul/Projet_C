@@ -1,8 +1,16 @@
 #include "main.h"
 
-char chifrement (char entree, char perroquet)
+char chifrement (char entree, char perroquet, bool sens)
 {
-
-    return entree - perroquet;
+    if (sens)
+    {
+        return entree - perroquet;
+    }else
+    {
+        return entree + perroquet;
+    }
+    
+    
+    
 
 }

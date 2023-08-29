@@ -17,8 +17,9 @@ struct Option_gene
 
 
 void menu (struct Option_gene);
-char chifrement (char, char);
+char chifrement (char, char, bool);
 void ouverture (struct Option_gene);
 char * lecture_peroquet (struct Option_gene);
+void decodage (struct Option_gene);
 
 #endif

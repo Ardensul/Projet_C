@@ -39,10 +39,16 @@ int main()
         case 4:
             printf("\nChiffrement du message en cour.\n");
             ouverture(general);
-            exit = true;
+            printf("Travail ternminer !\n");
             break;
 
         case 5:
+            printf("\nDecodage du mesage en cours\n");
+            decodage(general);
+            printf("Travail ternminer !\n");
+            break;
+
+        case 6:
             printf("\nAurevoir.\n");
             exit = true;
             break;
