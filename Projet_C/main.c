@@ -12,26 +12,32 @@ int main()
     while (!exit)
     {
         menu(general);
-        scanf("Quel est votre choix ?  %d",&choix);
+        scanf("%d",&choix);
+        fflush(stdin);
         switch (choix)
         {
         case 1:
             printf("\nChangement du peroquet.\n");
-            scanf("Entrez le nouveau peroquet : %s",&general.passfrase);
+            printf("Entrez le nouveau peroquet : ");
+            scanf("%s",&general.passfrase);
+            
             break;
         
         case 2:
             printf("\nChangement du fichier source.\n");
-            scanf("Entrez le chemin du fichier source : %s",&general.passfrase);
+            printf("Entrez le chemin du fichier source : ");
+            scanf("%s",&general.passfrase);
             break;
 
         case 3:
             printf("\nChangement du fichier destination.\n");
-            scanf("Entrez le chemin du fichier de destination : %s",&general.passfrase);
+            printf("Entrez le chemin du fichier de destination : ");
+            scanf("%s",&general.passfrase);
             break;
 
         case 4:
             printf("\nChiffrement du message en cour.\n");
+            ouverture(general);
             exit = true;
             break;
 

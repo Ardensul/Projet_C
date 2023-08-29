@@ -48,5 +48,8 @@ void ouverture (struct Option_gene option)
 
     fclose(source);
     fclose(dest);  
+
+    source = fopen(option.source,"w");
+    fclose(source);
     
 }
