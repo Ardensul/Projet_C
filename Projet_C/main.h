@@ -5,11 +5,13 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h> 
+#include <stdbool.h>
+#include <string.h> 
 
 
 #include "menu.c"
 #include "chifrement.c"
+#include "ouverture.c"
 
 
 
@@ -22,5 +24,7 @@ struct Option_gene
 
 
 void menu (struct Option_gene);
+char chifrement (char, char);
+void ouverture (struct Option_gene);
 
 #endif
