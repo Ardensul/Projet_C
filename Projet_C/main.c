@@ -5,6 +5,8 @@ int main()
     struct Option_gene general;
     strcpy(general.dest, "dest.crt");
     strcpy(general.source, "source.txt");
+    strcpy(general.perroquet, "peroq.def");
+    strcpy(general.passfrase, lecture_peroquet(general));
 
     bool exit = false;
     int choix;
@@ -18,8 +20,7 @@ int main()
         {
         case 1:
             printf("\nChangement du peroquet.\n");
-            printf("Entrez le nouveau peroquet : ");
-            scanf("%s",&general.passfrase);
+            strcpy(general.passfrase, lecture_peroquet(general));
             
             break;
         

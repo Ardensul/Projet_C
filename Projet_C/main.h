@@ -4,6 +4,7 @@
 struct Option_gene
 {
     char passfrase[10 + 1];
+    char perroquet[50 + 1];
     char source[50 + 1];
     char dest[50 + 1];
 };
@@ -18,5 +19,6 @@ struct Option_gene
 void menu (struct Option_gene);
 char chifrement (char, char);
 void ouverture (struct Option_gene);
+char * lecture_peroquet (struct Option_gene);
 
 #endif
